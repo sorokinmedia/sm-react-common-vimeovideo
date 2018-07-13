@@ -20,6 +20,7 @@ function VimeoVideo(props) {
 		</div>)
 }
 
+
 VimeoVideo.propTypes = {
 	src: PropTypes.string.isRequired
 };

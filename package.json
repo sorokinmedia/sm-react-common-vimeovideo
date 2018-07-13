@@ -1,6 +1,6 @@
 {
 	"name": "sm-react-common-vimeovideo",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Common frontend components for SM",
 	"main": "dist/index.js",
 	"repository": {
@@ -62,8 +62,9 @@
 	},
 	"scripts": {
 		"start": "webpack-dev-server --hot --inline --mode development",
-		"prepublishOnly": "npm run release",
 		"release": "npm run build:dev && npm run build:prod",
+		"patch": "npm version patch",
+		"publish": "npm publish",
 		"build:prod": "cross-env NODE_ENV=production rollup -c",
 		"build:dev": "cross-env NODE_ENV=development rollup -c",
 		"test": "jest",

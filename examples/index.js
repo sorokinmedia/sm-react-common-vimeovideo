@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import PropTypes from 'prop-types';
-import Alert from '../lib';
+import VimeoVideo from '../lib';
 
-class App extends Component {
-
-	render() {
-		return (
-			<div>
-				<Alert showAlert="Error" />
-			</div>
-		)
-	}
+function App() {
+	return (
+		<div>
+			<VimeoVideo src="https://vimeo.com/30281976" />
+		</div>
+	)
 }
-
-App.propTypes = {}
-App.defaultProps = {}
 
 render(<App />, document.getElementById('root'));

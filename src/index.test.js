@@ -1,9 +1,9 @@
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import React from 'react';
-import VimeoVideo from './index';
+import { shallow, configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import React from 'react'
+import VimeoVideo from './index'
 
-configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() })
 
 function setup(customProps, lifeCycle = false) {
 	const props = {
@@ -17,17 +17,12 @@ describe('VimeoVideo component', () => {
 
 	it('should render the component', () => {
 		const { container } = setup({ src: 'https://vimeo.com/30281976' })
-		expect(container.exists()).toBe(true);
-	});
-
-	it('should not render the component', () => {
-		const { container } = setup()
-		expect(container.exists()).toBe(false);
-	});
+		expect(container.exists()).toBe(true)
+	})
 
 	it('should has dangerouslySetInnerHTML property', () => {
 		const { container } = setup({ src: 'https://vimeo.com/30281976' })
-		expect(container.find('.vimeo_video').children().props()).toHaveProperty('dangerouslySetInnerHTML');
-	});
+		expect(container.find('.vimeo_video').children().props()).toHaveProperty('dangerouslySetInnerHTML')
+	})
 
-});
+})

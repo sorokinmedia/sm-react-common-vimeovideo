@@ -60,6 +60,17 @@
 		"webpack-cli": "^3.0.8",
 		"webpack-dev-server": "^3.1.4"
 	},
+	"resolutions": {
+		"ansi-regex": "^6.0.1",
+		"braces": "^2.3.1",
+		"glob-parent": "^5.1.2",
+		"is-svg": "^4.2.1",
+		"js-yaml": "^3.13.0",
+		"merge": "^2.1.1",
+		"node-notifier": "^8.0.1",
+		"yargs-parser": "^13.1.1",
+		"color-string": "^1.5.5"
+	},
 	"scripts": {
 		"start": "webpack-dev-server --hot --inline --mode development",
 		"release": "npm run build:dev && npm run build:prod",
